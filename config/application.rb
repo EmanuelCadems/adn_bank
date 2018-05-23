@@ -41,5 +41,6 @@ module AdnBank
 
     config.active_job.queue_name_prefix = Rails.env
     config.active_job.queue_name_delimiter = '.'
+    require Rails.root.join('lib/diagonals.rb')
   end
 end
