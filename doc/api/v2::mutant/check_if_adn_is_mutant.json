@@ -1,8 +1,8 @@
 {
-  "resource": "Mutant",
+  "resource": "V2::Mutant",
   "resource_explanation": "Level 2: This will check if the adn is mutant or human",
   "http_method": "POST",
-  "route": "/mutant",
+  "route": "/v2/mutant",
   "description": "Check if adn is mutant",
   "explanation": "When the adn is mutant it will return 200",
   "parameters": [
@@ -19,7 +19,7 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/mutant",
+      "request_path": "/v2/mutant",
       "request_body": "{\"dna\":[\"ATGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTA\",\"TCACTG\"]}",
       "request_headers": {
         "Content-Type": "application/json",
@@ -35,12 +35,12 @@
       "response_headers": {
         "Content-Type": "text/html",
         "Cache-Control": "no-cache",
-        "X-Request-Id": "98d6be14-415f-41b5-87f2-0350cc4512ab",
-        "X-Runtime": "0.004406",
+        "X-Request-Id": "831f781c-6c0e-410d-9fef-a0e75d7a3249",
+        "X-Runtime": "0.009055",
         "Content-Length": "0"
       },
       "response_content_type": "text/html",
-      "curl": "curl \"http://localhost:3000/mutant\" -d '{\"dna\":[\"ATGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTA\",\"TCACTG\"]}' -X POST \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+      "curl": "curl \"http://localhost:3000/v2/mutant\" -d '{\"dna\":[\"ATGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTA\",\"TCACTG\"]}' -X POST \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
     }
   ]
 }

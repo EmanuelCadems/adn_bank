@@ -7,7 +7,7 @@ Parameters:
                    (A,T,C,G)
 
 Request:
-  POST /mutant
+  POST /v2/mutant
   Content-Type: application/json
   Cookie: 
   Host: example.org
@@ -19,8 +19,8 @@ Response:
   Cache-Control: no-cache
   Content-Length: 0
   Content-Type: text/html
-  X-Request-Id: 98d6be14-415f-41b5-87f2-0350cc4512ab
-  X-Runtime: 0.004406
+  X-Request-Id: 831f781c-6c0e-410d-9fef-a0e75d7a3249
+  X-Runtime: 0.009055
 
 
 Check if adn is human
@@ -32,7 +32,7 @@ Parameters:
                    (A,T,C,G)
 
 Request:
-  POST /mutant
+  POST /v2/mutant
   Content-Type: application/json
   Cookie: 
   Host: example.org
@@ -44,5 +44,7 @@ Response:
   Cache-Control: no-cache
   Content-Length: 0
   Content-Type: text/html
-  X-Request-Id: 150b8a2d-5da2-4545-a534-0b835a5ecbe6
-  X-Runtime: 0.001964
+  X-Request-Id: cd77b13d-f03d-4fcb-827f-3d3c7b26f05f
+  X-Runtime: 0.001942
+
+

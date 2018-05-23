@@ -1,24 +1,26 @@
 require 'rails_helper'
 require 'rspec_api_documentation/dsl'
 
-resource "Mutant" do
+resource "V3::Mutant", prefix: '/v3' do
   header "Content-Type", "application/json"
 
-  explanation "Level 2: This will check if the adn is mutant or human"
+  explanation 'Level 3: This will check if the adn is mutant or human
+               This will also persist the ADN in a DB if it is human or mutant'
 
   parameter :dna, 'DNA it is a square matrix from 4x4 to 12x12. Each element
                    can only contain zero or more of the valid characters:
                    (A,T,C,G)', required: true, 'Type': Array
 
-  post "/mutant" do
+  post '/v3/mutant' do
     let(:raw_post) { params.to_json }
 
     context 'when it is a mutant' do
       let(:dna) { ['ATGCGA','CAGTGC','TTATGT','AGAAGG','CCCCTA','TCACTG'] }
 
-      example_request "Check if adn is mutant" do
-        explanation "When the adn is mutant it will return 200"
+      example_request 'Check if adn is mutant' do
+        explanation 'When the adn is mutant it will return 200'
         expect(response_status).to eq(200)
+        # expect(Mutant.last.dna).to eq(dna)
       end
     end
 
@@ -28,7 +30,9 @@ resource "Mutant" do
       example_request "Check if adn is human" do
         explanation "When the adn is human it will return 403"
         expect(response_status).to eq(403)
+        # expect(Human.last.dna).to eq(dna)
       end
     end
   end
 end
+

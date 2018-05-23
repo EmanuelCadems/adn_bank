@@ -1,0 +1,46 @@
+{
+  "resource": "V3::Mutant",
+  "resource_explanation": "Level 3: This will check if the adn is mutant or human",
+  "http_method": "POST",
+  "route": "/v3/mutant",
+  "description": "Check if adn is mutant",
+  "explanation": "When the adn is mutant it will return 200",
+  "parameters": [
+    {
+      "required": true,
+      "Type": "Array",
+      "name": "dna",
+      "description": "DNA it is a square matrix from 4x4 to 12x12. Each element\n                   can only contain zero or more of the valid characters:\n                   (A,T,C,G)"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/v3/mutant",
+      "request_body": "{\"dna\":[\"ATGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTA\",\"TCACTG\"]}",
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": null,
+      "response_headers": {
+        "Content-Type": "text/html",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "90a20043-b0de-474a-97f7-3ea4ccfb4d87",
+        "X-Runtime": "0.003982",
+        "Content-Length": "0"
+      },
+      "response_content_type": "text/html",
+      "curl": "curl \"http://localhost:3000/v3/mutant\" -d '{\"dna\":[\"ATGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTA\",\"TCACTG\"]}' -X POST \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

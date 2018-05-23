@@ -34,6 +34,12 @@ module AdnBank
     # config.autoload_paths += %W(#{config.root}/app/services)
     config.autoload_paths << Rails.root.join("app/services")
     config.eager_load_paths << Rails.root.join('lib')
-    #
+
+    # config.autoload_paths << Rails.root.join("lib/array_decorator.rb")
+    # config.autoload_paths += %W(#{config.root}/lib)
+    # config.autoload_paths += Dir["#{config.root}/lib/**/"]
+
+    config.active_job.queue_name_prefix = Rails.env
+    config.active_job.queue_name_delimiter = '.'
   end
 end

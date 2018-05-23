@@ -1,21 +1,41 @@
 {
   "resources": [
     {
-      "name": "Mutant",
+      "name": "V2::Mutant",
       "explanation": "Level 2: This will check if the adn is mutant or human",
       "examples": [
         {
           "description": "Check if adn is human",
-          "link": "mutant/check_if_adn_is_human.json",
+          "link": "v2::mutant/check_if_adn_is_human.json",
           "groups": "all",
-          "route": "/mutant",
+          "route": "/v2/mutant",
           "method": "post"
         },
         {
           "description": "Check if adn is mutant",
-          "link": "mutant/check_if_adn_is_mutant.json",
+          "link": "v2::mutant/check_if_adn_is_mutant.json",
           "groups": "all",
-          "route": "/mutant",
+          "route": "/v2/mutant",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "V3::Mutant",
+      "explanation": "Level 3: This will check if the adn is mutant or human",
+      "examples": [
+        {
+          "description": "Check if adn is human",
+          "link": "v3::mutant/check_if_adn_is_human.json",
+          "groups": "all",
+          "route": "/v3/mutant",
+          "method": "post"
+        },
+        {
+          "description": "Check if adn is mutant",
+          "link": "v3::mutant/check_if_adn_is_mutant.json",
+          "groups": "all",
+          "route": "/v3/mutant",
           "method": "post"
         }
       ]

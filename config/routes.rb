@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  post '/mutant', to: 'mutant#create'
+  namespace :v2 do
+    post '/mutant', to: 'mutant#create'
+  end
+
+  namespace :v3 do
+    post '/mutant', to: 'mutant#create'
+  end
 
   mount Raddocs::App => '/docs'
 

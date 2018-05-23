@@ -1,0 +1,48 @@
+Check if adn is mutant
+----------------------
+
+Parameters:
+  * dna - DNA it is a square matrix from 4x4 to 12x12. Each element
+                   can only contain zero or more of the valid characters:
+                   (A,T,C,G)
+
+Request:
+  POST /v3/mutant
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  {"dna":["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]}
+
+Response:
+  Status: 200 OK
+  Cache-Control: no-cache
+  Content-Length: 0
+  Content-Type: text/html
+  X-Request-Id: 90a20043-b0de-474a-97f7-3ea4ccfb4d87
+  X-Runtime: 0.003982
+
+
+Check if adn is human
+---------------------
+
+Parameters:
+  * dna - DNA it is a square matrix from 4x4 to 12x12. Each element
+                   can only contain zero or more of the valid characters:
+                   (A,T,C,G)
+
+Request:
+  POST /v3/mutant
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  {"dna":["ATGCGA","CAGTGC","TTATTT","AGACGG","GCGTCA","TCACTG"]}
+
+Response:
+  Status: 403 Forbidden
+  Cache-Control: no-cache
+  Content-Length: 0
+  Content-Type: text/html
+  X-Request-Id: 2e040b16-01a2-4087-9458-8301fcf76776
+  X-Runtime: 0.003194
