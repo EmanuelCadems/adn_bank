@@ -1,0 +1,24 @@
+{
+  "resources": [
+    {
+      "name": "Mutant",
+      "explanation": "Level 2: This will check if the adn is mutant or human",
+      "examples": [
+        {
+          "description": "Check if adn is human",
+          "link": "mutant/check_if_adn_is_human.json",
+          "groups": "all",
+          "route": "/mutant",
+          "method": "post"
+        },
+        {
+          "description": "Check if adn is mutant",
+          "link": "mutant/check_if_adn_is_mutant.json",
+          "groups": "all",
+          "route": "/mutant",
+          "method": "post"
+        }
+      ]
+    }
+  ]
+}
