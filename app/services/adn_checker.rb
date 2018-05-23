@@ -3,18 +3,13 @@ class AdnChecker
   PATTERN_MATCHING = VALID_STRINGS.collect {|str| str * 4}
 
   def is_mutant?(adn=[])
-    # find_horizontal(sequence)
-      # return true if sequence.find { |e| /#{pattern}/ =~ e }
+    return unless valid?(adn)
     horizontal_matching(adn) || vertical_matching(adn) || diagonal_matching(adn)
   end
 
   private
 
   def horizontal_matching(adn)
-    # PATTERN_MATCHING.each do |pattern|
-    #   return true if adn.find {|x| x.include?(pattern)}
-    # end
-    # return false
     return true if adn.find {|x| match_word?(x) }
 
     return false
@@ -40,5 +35,26 @@ class AdnChecker
     end
 
     false
+  end
+
+  def valid?(adn)
+    squared_matrix?(adn) && at_least_4_characters?(adn) &&
+    maximum_12_characters?(adn) && valid_characters?(adn)
+  end
+
+  def squared_matrix?(adn)
+    adn.all? { |i| i.length == adn.length }
+  end
+
+  def at_least_4_characters?(adn)
+    adn.all? { |i| i.length >= 4 }
+  end
+
+  def maximum_12_characters?(adn)
+    adn.all? { |i| i.length <= 12 }
+  end
+
+  def valid_characters?(adn)
+    adn.all? { |i| i.gsub(/[ATCG]*/, '') == '' }
   end
 end
