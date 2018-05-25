@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   namespace :v3 do
     post '/mutant', to: 'mutant#create'
+    get '/stats', to: 'stats#index'
   end
 
   mount Raddocs::App => '/docs'

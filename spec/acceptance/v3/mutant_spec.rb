@@ -4,7 +4,7 @@ require 'rspec_api_documentation/dsl'
 resource "V3::Mutant", prefix: '/v3' do
   header "Content-Type", "application/json"
 
-  explanation 'Level 3: This will check if the adn is mutant or human
+  explanation 'Level 3: This will check if the adn is mutant or human.
                This will also persist the ADN in a DB if it is human or mutant'
 
   parameter :dna, 'DNA it is a square matrix from 4x4 to 12x12. Each element
@@ -20,7 +20,6 @@ resource "V3::Mutant", prefix: '/v3' do
       example_request 'Check if adn is mutant' do
         explanation 'When the adn is mutant it will return 200'
         expect(response_status).to eq(200)
-        # expect(Mutant.last.dna).to eq(dna)
       end
     end
 
@@ -30,7 +29,6 @@ resource "V3::Mutant", prefix: '/v3' do
       example_request "Check if adn is human" do
         explanation "When the adn is human it will return 403"
         expect(response_status).to eq(403)
-        # expect(Human.last.dna).to eq(dna)
       end
     end
   end
