@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>V3::Mutant API</title>
+    <title>V3::Stats API</title>
     <meta charset="utf-8">
     <style>
       
@@ -106,39 +106,15 @@ table th, table td {
   </head>
   <body>
     <div class="container">
-      <h1>V3::Mutant API</h1>
+      <h1>V3::Stats API</h1>
 
-        <p class="explanation">Level 3: This will check if the adn is mutant or human.
-               This will also persist the ADN in a DB if it is human or mutant</p>
+        <p class="explanation">Level 3: Statistics DNAs. Counts of human and mutant DNA and
+               ratio</p>
 
       <div class="article">
-        <h2>Check if adn is mutant</h2>
-        <h3>POST /v3/mutant</h3>
-          <p class="explanation">
-            When the adn is mutant it will return 200
-          </p>
+        <h2>get stats</h2>
+        <h3>GET /v3/stats</h3>
 
-          <h3>Parameters</h3>
-          <table class="parameters table table-striped table-bordered table-condensed">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="required">
-                    <span class="name">dna</span>
-                </td>
-                <td>
-                  <span class="description">DNA it is a square matrix from 4x4 to 12x12. Each element
-                   can only contain zero or more of the valid characters:
-                   (A,T,C,G)</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
 
 
           <h3>Request</h3>
@@ -149,27 +125,32 @@ Host: example.org
 Cookie: </pre>
 
           <h4>Route</h4>
-          <pre class="request route highlight">POST /v3/mutant</pre>
+          <pre class="request route highlight">GET /v3/stats</pre>
 
 
-            <h4>Body</h4>
-            <pre class="request body">{"dna":["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]}</pre>
 
             <h4>cURL</h4>
-            <pre class="request curl">curl &quot;http://localhost:3000/v3/mutant&quot; -d &#39;{&quot;dna&quot;:[&quot;ATGCGA&quot;,&quot;CAGTGC&quot;,&quot;TTATGT&quot;,&quot;AGAAGG&quot;,&quot;CCCCTA&quot;,&quot;TCACTG&quot;]}&#39; -X POST \
+            <pre class="request curl">curl -g &quot;http://localhost:3000/v3/stats&quot; -X GET \
 	-H &quot;Content-Type: application/json&quot; \
 	-H &quot;Host: example.org&quot; \
 	-H &quot;Cookie: &quot;</pre>
 
             <h3>Response</h3>
               <h4>Headers</h4>
-              <pre class="response headers">Content-Type: text/html
-Cache-Control: no-cache
-X-Request-Id: 9c9e71da-235c-4a56-9048-8b7f6c285460
-X-Runtime: 0.007471
-Content-Length: 0</pre>
+              <pre class="response headers">Content-Type: application/json; charset=utf-8
+ETag: W/&quot;4d9902fa3efa9d4411e381c723cb007e&quot;
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: d08c5f09-9222-4297-b299-a77e3935e340
+X-Runtime: 0.009623
+Content-Length: 71</pre>
             <h4>Status</h4>
             <pre class="response status">200 OK</pre>
+              <h4>Body</h4>
+              <pre class="response body">{
+  &quot;count_mutant_dna&quot;: 2,
+  &quot;count_human_dna&quot;: 11,
+  &quot;ratio&quot;: 0.18181818181818182
+}</pre>
       </div>
     </div>
   </body>

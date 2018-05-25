@@ -22,7 +22,7 @@
     },
     {
       "name": "V3::Mutant",
-      "explanation": "Level 3: This will check if the adn is mutant or human",
+      "explanation": "Level 3: This will check if the adn is mutant or human.\n               This will also persist the ADN in a DB if it is human or mutant",
       "examples": [
         {
           "description": "Check if adn is human",
@@ -37,6 +37,19 @@
           "groups": "all",
           "route": "/v3/mutant",
           "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "V3::Stats",
+      "explanation": "Level 3: Statistics DNAs. Counts of human and mutant DNA and\n               ratio",
+      "examples": [
+        {
+          "description": "get stats",
+          "link": "v3::stats/get_stats.json",
+          "groups": "all",
+          "route": "/v3/stats",
+          "method": "get"
         }
       ]
     }

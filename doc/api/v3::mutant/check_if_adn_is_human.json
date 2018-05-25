@@ -1,6 +1,6 @@
 {
   "resource": "V3::Mutant",
-  "resource_explanation": "Level 3: This will check if the adn is mutant or human",
+  "resource_explanation": "Level 3: This will check if the adn is mutant or human.\n               This will also persist the ADN in a DB if it is human or mutant",
   "http_method": "POST",
   "route": "/v3/mutant",
   "description": "Check if adn is human",
@@ -35,8 +35,8 @@
       "response_headers": {
         "Content-Type": "text/html",
         "Cache-Control": "no-cache",
-        "X-Request-Id": "2e040b16-01a2-4087-9458-8301fcf76776",
-        "X-Runtime": "0.003194",
+        "X-Request-Id": "587a5c93-584a-41c4-a717-e572656972bb",
+        "X-Runtime": "0.023616",
         "Content-Length": "0"
       },
       "response_content_type": "text/html",

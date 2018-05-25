@@ -19,8 +19,8 @@ Response:
   Cache-Control: no-cache
   Content-Length: 0
   Content-Type: text/html
-  X-Request-Id: 831f781c-6c0e-410d-9fef-a0e75d7a3249
-  X-Runtime: 0.009055
+  X-Request-Id: 69dfe2be-9e62-4d75-86b6-2d7cc8bb4e3d
+  X-Runtime: 0.012550
 
 
 Check if adn is human
@@ -44,7 +44,7 @@ Response:
   Cache-Control: no-cache
   Content-Length: 0
   Content-Type: text/html
-  X-Request-Id: cd77b13d-f03d-4fcb-827f-3d3c7b26f05f
-  X-Runtime: 0.001942
+  X-Request-Id: 9f4fbdc0-e40f-4506-b3c9-3b953f9632dd
+  X-Runtime: 0.001562
 
 

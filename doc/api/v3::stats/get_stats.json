@@ -1,0 +1,42 @@
+{
+  "resource": "V3::Stats",
+  "resource_explanation": "Level 3: Statistics DNAs. Counts of human and mutant DNA and\n               ratio",
+  "http_method": "GET",
+  "route": "/v3/stats",
+  "description": "get stats",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v3/stats",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"count_mutant_dna\": 2,\n  \"count_human_dna\": 11,\n  \"ratio\": 0.18181818181818182\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"4d9902fa3efa9d4411e381c723cb007e\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "d08c5f09-9222-4297-b299-a77e3935e340",
+        "X-Runtime": "0.009623",
+        "Content-Length": "71"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl -g \"http://localhost:3000/v3/stats\" -X GET \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}
