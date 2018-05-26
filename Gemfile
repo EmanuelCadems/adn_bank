@@ -57,6 +57,7 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'churn', '1.0.2'
+gem 'coveralls', '0.7.1', require: false
 gem 'figaro', '1.1.1'
 gem 'raddocs', '2.2.0'
 gem 'rails_best_practices', '1.19.2'
