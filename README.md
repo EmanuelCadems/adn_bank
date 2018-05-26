@@ -1,37 +1,85 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an API which allows you to check a DNA an save it into a database. It also has an endpoint for statistics.
 
-Things you may want to cover:
+The version 2 only allows you to detect what kind of DNA are you sending on.
+
+The version 3 attach a Database to the DNA Checker and includes an enpoint for statistics.
+
+This is an scalable API with Google App Engine flexible environment.
+
 
 ## Ruby version
+
+
   2.5.1
-
-  Are you using rvm?
-  run:
+    Are you using rvm?
+    run:
+```bash
   $ cd .
+```
 
-* System dependencies
+## Configuration
 
-* Configuration
 
-* Database creation
+Install bundler with:
+```bash
+  $ gem install bundler -v='1.16.2' --no-rdoc --no-ri
+```
+Then install all dependencies with
+```bash
+  $ bundle install
+```
 
-* Database initialization
+## Database creation
+```bash
+  $ rake db:create
+```
 
-* How to run the test suite
+## Database initialization
+```bash
+  $ rake db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## How to run the test suite
+This project use rspec. You can run the tests with:
+```bash
+  $ rake
+```
+You can see the coverage with:
+```bash
+  $ open coverage/index.html
+```
+
+## Check code
+This project check the quality of the code using rubucop, rails_best_practices, flay, brakeman, and rspec.
+
+You can run all this tools with the following task:
+```bash
+  $ rake code:check
+```
+
+## Start the server
+```bash
+  $ rails s
+```
+
+## How to use:
+Check de documentation here:
+  https://dna-bank-205308.appspot.com/docs/
+
+You can use curl or even import the requests to Postman using the curl command which is supplied by the documentation
 
 ## Deployment instructions
-
-
 To deploy run:
+```bash
   $ gcloud app deploy --project dna-bank-205308
-
+```
 You can stream logs from the command line by running:
+```bash
   $ gcloud app logs tail -s default
-
+```
 To view your application in the web browser run:
+```bash
   $ gcloud app browse
+ ```
