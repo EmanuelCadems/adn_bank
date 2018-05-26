@@ -24,6 +24,7 @@ mysql_settings: &mysql_settings
   password: <%= ENV['MYSQL_PASS'] %>
   database: <%= ENV['MYSQL_DATABASE'] %>
   socket: <%= ENV['MYSQL_SOCKET'] %>
+  host: 'localhost'
 # [END mysql_settings]
 
 production:
