@@ -39,8 +39,8 @@ group :development, :test do
 end
 
 group :test do
-  gem 'pg'
   gem 'database_cleaner', '1.7.0'
+  gem 'pg'
 end
 
 group :development do
@@ -56,8 +56,10 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
+gem 'churn', '1.0.2'
 gem 'figaro', '1.1.1'
 gem 'raddocs', '2.2.0'
 gem 'rails_best_practices', '1.19.2'
 gem 'rspec_api_documentation', '5.1.0'
 gem 'rubocop', require: false
+gem 'simplecov', require: false, group: :test

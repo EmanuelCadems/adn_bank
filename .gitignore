@@ -27,3 +27,4 @@ notes.txt
 # Ignore application configuration
 /config/application.yml
 db/*.sqlite3
+/coverage/*
