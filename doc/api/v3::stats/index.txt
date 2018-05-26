@@ -13,8 +13,8 @@ Response:
   Content-Length: 71
   Content-Type: application/json; charset=utf-8
   ETag: W/"4d9902fa3efa9d4411e381c723cb007e"
-  X-Request-Id: d08c5f09-9222-4297-b299-a77e3935e340
-  X-Runtime: 0.009623
+  X-Request-Id: b91a3507-1dbe-45e2-8d30-272c9dd88047
+  X-Runtime: 0.010920
 
   {
     "count_mutant_dna": 2,

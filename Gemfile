@@ -39,6 +39,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'pg'
   gem 'database_cleaner', '1.7.0'
 end
 

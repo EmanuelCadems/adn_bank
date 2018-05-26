@@ -35,12 +35,12 @@
       "response_headers": {
         "Content-Type": "text/html",
         "Cache-Control": "no-cache",
-        "X-Request-Id": "9c9e71da-235c-4a56-9048-8b7f6c285460",
-        "X-Runtime": "0.007471",
+        "X-Request-Id": "873b4124-ddc8-49d3-bcf8-63c349beca19",
+        "X-Runtime": "0.007153",
         "Content-Length": "0"
       },
       "response_content_type": "text/html",
-      "curl": "curl \"http://localhost:3000/v3/mutant\" -d '{\"dna\":[\"ATGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTA\",\"TCACTG\"]}' -X POST \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+      "curl": "curl \"https://dna-bank-205308.appspot.com/v3/mutant\" -d '{\"dna\":[\"ATGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTA\",\"TCACTG\"]}' -X POST \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
     }
   ]
 }

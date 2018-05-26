@@ -80,10 +80,13 @@ development:
 #   database: adn_bank_test
 
 test:
-  adapter: sqlite3
-  pool: 5
-  timeout: 5000
-  database: db/test.sqlite3
+  database: adn_bank_test
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
 
 
 # As with config/secrets.yml, you never want to store sensitive information,
