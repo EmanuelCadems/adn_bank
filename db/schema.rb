@@ -12,17 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2018_05_23_195938) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "humans", force: :cascade do |t|
-    t.text "dna", default: "--- []\n"
+    t.text "dna"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "mutants", force: :cascade do |t|
-    t.text "dna", default: "--- []\n"
+    t.text "dna"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

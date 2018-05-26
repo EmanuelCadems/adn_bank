@@ -23,3 +23,7 @@
 notes.txt
 .DS_Store*
 /notes/*
+
+# Ignore application configuration
+/config/application.yml
+db/*.sqlite3
