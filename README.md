@@ -1,5 +1,6 @@
 # README
 
+[![GitHub version](https://badge.fury.io/gh/EmanuelCadems%2Fadn_bank.svg)](https://badge.fury.io/gh/EmanuelCadems%2Fadn_bank)
 [![Build Status](https://travis-ci.org/EmanuelCadems/adn_bank.svg?branch=master)](https://travis-ci.org/EmanuelCadems/adn_bank)
 [![Maintainability](https://api.codeclimate.com/v1/badges/cbe58f58c5b9514c68da/maintainability)](https://codeclimate.com/github/EmanuelCadems/adn_bank/maintainability)
 [![Coverage Status](https://coveralls.io/repos/github/EmanuelCadems/adn_bank/badge.svg?branch=master)](https://coveralls.io/github/EmanuelCadems/adn_bank?branch=master)
