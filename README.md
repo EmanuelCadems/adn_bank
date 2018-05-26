@@ -1,6 +1,7 @@
 # README
 
 [![Build Status](https://travis-ci.org/EmanuelCadems/adn_bank.svg?branch=master)](https://travis-ci.org/EmanuelCadems/adn_bank)
+[![Maintainability](https://api.codeclimate.com/v1/badges/cbe58f58c5b9514c68da/maintainability)](https://codeclimate.com/github/EmanuelCadems/adn_bank/maintainability)
 
 This is an API which allows you to check a DNA an save it into a database. It also has an endpoint for statistics.
 
