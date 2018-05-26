@@ -21,9 +21,3 @@ beta_settings:
   # The connection name of your instance on its Overview page in the Google
   # Cloud Platform Console, or use `[YOUR_PROJECT_ID]:[YOUR_REGION]:[YOUR_INSTANCE_NAME]`
   cloud_sql_instances: dna-bank-205308:southamerica-east1:dna-bank-production
-
-env_variables:
-  MYSQL_USER: <%= ENV['MYSQL_USER'] %>
-  MYSQL_PASS: <%= ENV['MYSQL_PASS'] %>
-  MYSQL_DATABASE: <%= ENV['MYSQL_DATABASE'] %>
-  MYSQL_SOCKET: <%= ENV['MYSQL_SOCKET'] %>
