@@ -1,5 +1,7 @@
 # README
 
+[![Build Status](https://travis-ci.org/EmanuelCadems/adn_bank.svg?branch=master)](https://travis-ci.org/EmanuelCadems/adn_bank)
+
 This is an API which allows you to check a DNA an save it into a database. It also has an endpoint for statistics.
 
 The version 2 only allows you to detect what kind of DNA are you sending on.
